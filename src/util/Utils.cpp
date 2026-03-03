@@ -56,6 +56,7 @@ void Message::to_json(nlohmann::json & j, const Message & m)
 {
   j = nlohmann::json{
     {"timestamp", m.timestamp},
+    {"frame", m.frame},
     {"x", m.x},
     {"y", m.y},
     {"z", m.z}
@@ -65,6 +66,7 @@ void Message::to_json(nlohmann::json & j, const Message & m)
 void Message::from_json(const nlohmann::json & j, Message & m)
 {
   j.at("timestamp").get_to(m.timestamp);
+  j.at("frame").get_to(m.frame);
   j.at("x").get_to(m.x);
   j.at("y").get_to(m.y);
   j.at("z").get_to(m.z);
