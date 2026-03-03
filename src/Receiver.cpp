@@ -25,7 +25,7 @@ void Receiver::Node::onDataReceived(const Socket::IPFrame & frame)
   */
   Utils::Message::deserialize(frame, data);
   
-  // RCLCPP_INFO(logger, "Received data from '%s:%d'", frame.address.c_str(), frame.port);
+  RCLCPP_INFO(logger, "Received data from '%s:%d'", frame.address.c_str(), frame.port);
   RCLCPP_INFO(logger, "\n\tstamp: %ld\n\tx: %f\n\ty: %f\n\tz: %f", 
               data.timestamp, data.x, data.y, data.z);
 }

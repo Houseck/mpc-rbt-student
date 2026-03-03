@@ -37,7 +37,7 @@ void Sender::Node::onDataTimerTick()
     RCLCPP_ERROR(logger, "Failed to send data to network!");
   }
 
-  //RCLCPP_INFO(logger, "Sending data to host: '%s:%d'", frame.address.c_str(), frame.port);
+  RCLCPP_INFO(logger, "Sending data to host: '%s:%d'", frame.address.c_str(), frame.port);
 
   RCLCPP_INFO(logger, "\n\tstamp: %ld\n\tx: %f\n\ty: %f\n\tz: %f", 
               data.timestamp, data.x, data.y, data.z);
