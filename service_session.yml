@@ -4,7 +4,7 @@ root: <%= @settings["working_directory"]%>
 startup_window: monitoring
 windows:
   - monitoring:
-      layout: even-vertical
+      layout: even-horizontal
       panes:
-        - echo "Watch the receiver status here !"
-        - echo "Watch the sender status here !"
+        - watch "systemctl status example_receiver"
+        - watch "systemctl status example_sender"

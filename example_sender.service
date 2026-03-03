@@ -4,9 +4,9 @@ Wants = network-online.target
 After = local-fs.target network-online.target
 
 [Service]
-User =
-WorkingDirectory =
-ExecStart =
+User = vit
+WorkingDirectory = /home/vit/workspace/mpc-rbt-student
+ExecStart = /home/vit/workspace/mpc-rbt-student/run_sender.sh
 Restart = on-failure
 RestartSec = 5
 TimeoutStopSec = 5
