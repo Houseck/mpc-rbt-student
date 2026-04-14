@@ -311,8 +311,8 @@ void PlanningNode::smoothPath() {
     std::vector<geometry_msgs::msg::PoseStamped> newPath = path_.poses;
     
     // Parametry pro gradient descent (můžeš s nimi pak experimentovat)
-    float weight_data = 0.1;   // Jak moc se chceme držet původní A* trasy (aby to nenarazilo do zdi)
-    float weight_smooth = 0.5; // Jak moc chceme body vyhlazovat mezi sebou
+    float weight_data = 0.7;   // Jak moc se chceme držet původní A* trasy (aby to nenarazilo do zdi)
+    float weight_smooth = 0.1; // Jak moc chceme body vyhlazovat mezi sebou
     float tolerance = 0.00001; // Jaká změna nám už stačí k ukončení
     int max_iterations = 1000; // Maximální počet iterací (ochrana proti nekonečné smyčce podle tipu)
 

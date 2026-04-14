@@ -26,6 +26,8 @@ public:
     {
         // TODO: Zkontrolujte response->success. Pokud je false, vraťte FAILURE.
         // Tento node nemá žádný output port – stačí vrátit SUCCESS.
+        if(response->success)
+            return BT::NodeStatus::SUCCESS;
         return BT::NodeStatus::FAILURE;
     }
 

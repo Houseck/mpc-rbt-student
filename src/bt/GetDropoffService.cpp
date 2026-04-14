@@ -29,6 +29,10 @@ public:
         // TODO: Zkontrolujte response->success. Pokud je false, vraťte FAILURE.
         // Zapište response->message do output portu "storage_id" pomocí setOutput().
         // Vraťte SUCCESS.
+        if(response->success){
+            setOutput("storage_id", response->message);
+            return BT::NodeStatus::SUCCESS;
+        }
         return BT::NodeStatus::FAILURE;
     }
 
